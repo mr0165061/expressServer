@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mr0165061/expressServer/issues"
   },
-  "homepage": "https://github.com/mr0165061/expressServer#readme"
+  "homepage": "https://github.com/mr0165061/expressServer#readme",
+  "dependencies": {
+    "express": "4.16.2"
+  }
 }
