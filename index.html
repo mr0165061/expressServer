@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+            Express web server index page
+            Author: Mark Rone
+            Date:   11.10.2017
+
+            Filename: index.html
+        -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>My Express Web Server</title>             
+</head>
+<body class="w3-black">
+    <div class="w3-bar w3-black w3-card">
+        <a href="home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+        <a href="about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+    </div>
+    <div class="w3-black" id="tour">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <div class="w3-row-padding" style="margin: 0 -16px">
+                <div class="w3-border w3-white w3-text-grey">
+                    <p class="w3-padding">My Favorite Songs</p>
+                </div>
+            </div>
+            <div class="w3-row-padding w3-padding-32" style="margin: 0 -16px; display: table">
+                <div class="w3-third w3-margin-bottom" style="display: table-cell">
+                    <div class="w3-container w3-white" >
+                        <p>
+                            <b>Aquabats - Super Rad</b>
+                        </p>
+                        <p>The Aquabats are known for a heavily brass-driven melody as well as the surf-inspired lead guitar from Southern, California</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="superRadBtn">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p>
+                            <b>Rancid - Time Bomb</b>
+                        </p>
+                        <p>Rancid a punk rock band formed in Berkeley, California. Founded by punk veterans who previously played in the highly influential ska punk band Operation Ivy, Rancid is often credited for reviving mainstream interest in punk rock.</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="timeBomb">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p>
+                            <b>Dance Hall Crashers - Lost Again</b>
+                        </p>
+                        <p>Streetlight Manifesto is an American ska punk band from New Brunswick, New Jersey</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="lostAgain">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-row-padding w3-padding-32" style="margin: 0 -16px; display: table">
+                <div class="w3-third w3-margin-bottom" style="display: table-cell">
+                    <div class="w3-container w3-white" >
+                        <p>
+                            <b>Rancid - Ruby Soho</b>
+                        </p>
+                        <p>Rancid a punk rock band formed in Berkeley, California. Founded by punk veterans who previously played in the highly influential ska punk band Operation Ivy, Rancid is often credited for reviving mainstream interest in punk rock.</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="rubySoho">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p>
+                            <b>Flogging Molly - Seven Deadly Sins</b>
+                        </p>
+                        <p>Flogging Molly is an Irish-American seven-piece Celtic punk band from Los Angeles, California and led by Irish vocalist Dave King, formerly of the hard rock band Fastway.</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="sevenDeadlySins">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p>
+                            <b>Streetlight Manifesto - Keasbey Nights</b>
+                        </p>
+                        <p>Streetlight Manifesto is an American ska punk band from New Brunswick, New Jersey</p>
+                        <button class="w3-button w3-black w3-margin-bottom" id="keasbeyNights">
+                            Watch This Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function OpenThisURL(url) {
+            var win = window.open(url, '_blank');
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+            }
+        }
+
+        var superRadBtn = document.getElementById("superRadBtn");
+        if (superRadBtn.addEventListener) {
+            superRadBtn.addEventListener("click", function(){OpenThisURL('https://youtu.be/7JJKfjiw1SE');}, false);
+        } else if (superRadBtn.attachEvent) {
+            superRadBtn.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/7JJKfjiw1SE');});
+        }
+
+        var timeBomb = document.getElementById("timeBomb");
+        if (timeBomb.addEventListener) {
+            timeBomb.addEventListener("click", function(){OpenThisURL('https://youtu.be/DhKHAopx7D0');}, false);
+        } else if (timeBomb.attachEvent) {
+            timeBomb.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/DhKHAopx7D0');});
+        }
+
+        var lostAgain = document.getElementById("lostAgain");
+        if (lostAgain.addEventListener) {
+            lostAgain.addEventListener("click", function(){OpenThisURL('https://youtu.be/fiZQ23T-qQ4');}, false);
+        } else if (lostAgain.attachEvent) {
+            lostAgain.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/fiZQ23T-qQ4');});
+        }
+
+        var rubySoho = document.getElementById("rubySoho");
+        if (rubySoho.addEventListener) {
+            rubySoho.addEventListener("click", function(){OpenThisURL('https://youtu.be/0P9QMkm9Eew');}, false);
+        } else if (rubySoho.attachEvent) {
+            rubySoho.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/0P9QMkm9Eew');});
+        }
+
+        var sevenDeadlySins = document.getElementById("sevenDeadlySins");
+        if (sevenDeadlySins.addEventListener) {
+            sevenDeadlySins.addEventListener("click", function(){OpenThisURL('https://youtu.be/J6-dO3Oq6G0');}, false);
+        } else if (sevenDeadlySins.attachEvent) {
+            sevenDeadlySins.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/J6-dO3Oq6G0');});
+        }
+
+        var keasbeyNights = document.getElementById("keasbeyNights");
+        if (keasbeyNights.addEventListener) {
+            keasbeyNights.addEventListener("click", function(){OpenThisURL('https://youtu.be/Sk9RRnpFg24');}, false);
+        } else if (keasbeyNights.attachEvent) {
+            keasbeyNights.attachEvent("onclick", function(){OpenThisURL('https://youtu.be/Sk9RRnpFg24');});
+        }
+    </script>
+</body>
+</html>
