@@ -24,7 +24,7 @@ app.get('/about', function(req, res) {
     console.log('/about handled the change to the about page');
 });
 
-app.listen(3000, () => console.log('Server Running'));
+app.listen(process.env.PORT || 3000, () => console.log('Server Running'));
 
 
 
